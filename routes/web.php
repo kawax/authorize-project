@@ -1,7 +1,5 @@
 <?php
 
-use Revolution\Authorize\Credentials;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +10,8 @@ use Revolution\Authorize\Credentials;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use Revolution\Authorize\Credentials;
 
 Route::get('/', function () {
 
@@ -93,5 +93,27 @@ Route::get('/custom', function () {
          */
         $client = Authorize::driver('custom')->client();
         dump($client->get('https://google.com/'));
+    }
+});
+
+Route::get('/google-api', function () {
+
+    $credentials = [
+        'application_name' => '',
+        'client_id'        => '',
+        'client_secret'    => '',
+        'redirect_uri'     => null,
+        'scopes'           => [],
+        'access_type'      => 'online',
+        'approval_prompt'  => 'auto',
+        'prompt'           => 'consent',
+    ];
+
+    if (Authorize::driver('google-api')->login($credentials)) {
+        /**
+         * @var \Google_Client $client
+         */
+        $client = Authorize::driver('google-api')->client();
+        dump($client);
     }
 });

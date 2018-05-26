@@ -68,4 +68,11 @@ class AuthorizeTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testGoogleApi()
+    {
+        $response = $this->get('/google-api');
+
+        $response->assertStatus(200);
+    }
 }
