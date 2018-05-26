@@ -6,8 +6,34 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
+use Mockery;
+
+use GuzzleHttp\Client;
+
+use Revolution\Authorize\Facades\Authorize;
+
 class AuthorizeTest extends TestCase
 {
+    public function tearDown()
+    {
+        parent::tearDown();
+
+        Mockery::close();
+    }
+
+    public function testMock()
+    {
+        $client = Mockery::mock(Client::class);
+        $client->shouldReceive('get')->andReturn('test');
+
+        Authorize::shouldReceive('login')->andReturn(true);
+        Authorize::shouldReceive('client')->andReturn($client);
+
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+    }
+
     public function testDefault()
     {
         $response = $this->get('/');
