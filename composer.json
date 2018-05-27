@@ -12,7 +12,8 @@
         "google/apiclient": "^2.2",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "revolution/authorize": "dev-master"
+        "revolution/authorize": "dev-master",
+        "revolution/authorize-google-api": "^1.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -27,8 +28,7 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/",
-            "Revolution\\Authorize\\GoogleApi\\": "lib/authorize-google-api/src/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

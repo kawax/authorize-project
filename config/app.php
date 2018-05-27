@@ -151,7 +151,6 @@ return [
          * Package Service Providers...
          */
 
-        Revolution\Authorize\GoogleApi\GoogleApiServiceProvider::class,
 
         /*
          * Application Service Providers...

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f47ed52ccb8d6de49da583c29d7764e",
+    "content-hash": "93ddd6bd7d1d859654e0411012c90000",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -2187,6 +2187,57 @@
                 "laravel"
             ],
             "time": "2018-05-26T07:36:32+00:00"
+        },
+        {
+            "name": "revolution/authorize-google-api",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kawax/authorize-google-api.git",
+                "reference": "39ce106ea180cf66499ecf28dccfe70e18831a14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kawax/authorize-google-api/zipball/39ce106ea180cf66499ecf28dccfe70e18831a14",
+                "reference": "39ce106ea180cf66499ecf28dccfe70e18831a14",
+                "shasum": ""
+            },
+            "require": {
+                "google/apiclient": "^2.2",
+                "illuminate/support": "^5.5",
+                "php": ">=7.0.0",
+                "revolution/authorize": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Revolution\\Authorize\\GoogleApi\\GoogleApiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Revolution\\Authorize\\GoogleApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kawax",
+                    "email": "kawaxbiz@gmail.com"
+                }
+            ],
+            "description": "Authorize HTTP Client Manager: Google API Driver",
+            "keywords": [
+                "authorize",
+                "google",
+                "laravel"
+            ],
+            "time": "2018-05-27T04:48:48+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
