@@ -75,4 +75,11 @@ class AuthorizeTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testAmazonWebJp()
+    {
+        $response = $this->get('/amazon-web-jp');
+
+        $response->assertStatus(200);
+    }
 }
