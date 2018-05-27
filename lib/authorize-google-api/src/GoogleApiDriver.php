@@ -2,9 +2,8 @@
 
 namespace Revolution\Authorize\GoogleApi;
 
-use Google_Client;
-
 use Revolution\Authorize\Drivers\AbstractDriver;
+use Google_Client;
 
 class GoogleApiDriver extends AbstractDriver
 {
