@@ -1,6 +1,6 @@
 # Authorize HTTP Client Manager demo project
 
-https://github.com/kawax/authorize
+https://github.com/kawax/authorize-manager
 
 ## Basic Usage
 https://github.com/kawax/authorize-project/blob/master/routes/web.php
