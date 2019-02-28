@@ -14,7 +14,7 @@ use Revolution\Authorize\Facades\Authorize;
 
 class AuthorizeTest extends TestCase
 {
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
 
@@ -72,13 +72,6 @@ class AuthorizeTest extends TestCase
     public function testGoogleApi()
     {
         $response = $this->get('/google-api');
-
-        $response->assertStatus(200);
-    }
-
-    public function testAmazonWebJp()
-    {
-        $response = $this->get('/amazon-web-jp');
 
         $response->assertStatus(200);
     }

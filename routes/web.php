@@ -118,23 +118,3 @@ Route::get('/google-api', function () {
     }
 });
 
-
-Route::get('amazon-web-jp', function () {
-
-    $credentials = new Credentials([
-        'mail'        => config('authorize.amazon-web-jp.mail'),
-        'password'    => config('authorize.amazon-web-jp.password'),
-        'chrome_path' => config('authorize.amazon-web-jp.chrome_path'),
-    ]);
-
-    if (Authorize::driver('amazon-web-jp')->login($credentials)) {
-        /**
-         * @var \Goutte\Client $client
-         */
-        $client = Authorize::driver('amazon-web-jp')->client();
-        dump($client);
-    } else {
-        $client = Authorize::driver('amazon-web-jp')->client();
-        dump($client);
-    }
-});

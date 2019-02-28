@@ -7,7 +7,6 @@ use Illuminate\Support\ServiceProvider;
 use Revolution\Authorize\Facades\Authorize;
 
 use App\Authorize\CustomDriver;
-use App\Authorize\AmazonWebJpDriver;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,10 +19,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Authorize::extend('custom', function ($app) {
             return new CustomDriver;
-        });
-
-        Authorize::extend('amazon-web-jp', function ($app) {
-            return new AmazonWebJpDriver;
         });
     }
 
